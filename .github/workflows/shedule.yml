@@ -1,0 +1,14 @@
+name: My Schedule
+on:
+  schedule:
+    - cron: '50 11 * * *'
+
+jobs:
+  test_schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run in schedule message
+        run: echo "This step run every day in 11 50"
+      - name: Create empty file
+        run:
+          touch my_new_file.txt
