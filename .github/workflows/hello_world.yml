@@ -4,7 +4,7 @@ name: Hello, World
 on: 
   push:
     branches:
-      - main
+      - no_branch
   workflow_dispatch:
 jobs:
   build:
