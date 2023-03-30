@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: get joke
-      run: curl https://v2.jokeapi.dev/joke/Any?contains=programmer | grep 
+      run: curl https://v2.jokeapi.dev/joke/Any?contians=programmers | grep -e "setup" -e "delivery" | tr -d "\":," | sed -e s/setup// -e s/delivery//
