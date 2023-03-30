@@ -3,10 +3,12 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: 15 * * * *
   workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: get joke
-      run: curl https://v2.jokeapi.dev/joke/Any?contains=programmer
+      run: curl https://v2.jokeapi.dev/joke/Any?contains=programmer | grep 
