@@ -1,15 +1,17 @@
 name: My Schedule
 on:
   schedule:
-    - cron: '6 * * * *'
+    - cron: '15 * * * *'
   workflow_dispatch:
 
 jobs:
   test_schedule:
     runs-on: ubuntu-latest
     steps:
-      - name: Run in schedule message
-        run: echo "This step run every day in 11 50"
+      - name: checkout repo
+        uses: actions/checkout@v2
+      - name: Run scheduled message
+        run: echo "This step run every 15 mins"
       - name: Create empty file
         run:
           touch my_new_file.txt

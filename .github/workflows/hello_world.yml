@@ -1,16 +1,14 @@
-# This is a basic workflow to help you get started with Actions
-
-name: Hello, World
+name: Hello, World!
 on: 
   push:
     branches:
-      - no_branch
+      - main
   workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Say Hello
-      run: touch new_file.txt 
+      run: echo "Hello World!"
 
 
